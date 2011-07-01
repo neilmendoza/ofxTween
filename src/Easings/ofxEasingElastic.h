@@ -10,10 +10,16 @@
 class ofxEasingElastic: public ofxEasing {
 
 	public:
+		ofxEasingElastic(float wobbleMultiplier = 1.f);
+
+		void setWobbleMultiplier(float wobbleMultiplier);
 
 		float easeIn(float t,float b , float c, float d);
 		float easeOut(float t,float b , float c, float d);
 		float easeInOut(float t,float b , float c, float d);
+	
+	private:
+		float wobbleMultiplier;
 };
 
 #endif
